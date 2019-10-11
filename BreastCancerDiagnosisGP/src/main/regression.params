@@ -1,0 +1,64 @@
+parent.0 = koza.params
+
+# We have one function set, of class GPFunctionSet
+gp.fs.size = 1
+gp.fs.0 = ec.gp.GPFunctionSet
+# We'll call the function set "f0".
+gp.fs.0.name = f0
+
+# We have five functions in the function set.  They are:
+gp.fs.0.size = 18
+
+gp.fs.0.func.0 = functions.Mul
+gp.fs.0.func.0.nc = nc2
+gp.fs.0.func.1 = functions.Add
+gp.fs.0.func.1.nc = nc2
+gp.fs.0.func.2 = functions.Sub
+gp.fs.0.func.2.nc = nc2
+gp.fs.0.func.3 = functions.Div
+gp.fs.0.func.3.nc = nc2
+gp.fs.0.func.4 = functions.Ephemeral
+gp.fs.0.func.4.nc = nc0
+gp.fs.0.func.5 = functions.Sin
+gp.fs.0.func.5.nc = nc1
+gp.fs.0.func.6 = functions.Cos
+gp.fs.0.func.6.nc = nc1
+gp.fs.0.func.7 = functions.Area_mean
+gp.fs.0.func.7.nc = nc0
+gp.fs.0.func.8 = functions.Compactness_mean
+gp.fs.0.func.8.nc = nc0
+gp.fs.0.func.9 = functions.Texture_mean
+gp.fs.0.func.9.nc = nc0
+gp.fs.0.func.10 = functions.ConcavePoint_mean
+gp.fs.0.func.10.nc = nc0
+gp.fs.0.func.11 = functions.Concavity_mean
+gp.fs.0.func.11.nc = nc0
+gp.fs.0.func.12 = functions.FractalDimension_mean
+gp.fs.0.func.12.nc = nc0
+gp.fs.0.func.13 = functions.Isymmetry_mean
+gp.fs.0.func.13.nc = nc0
+gp.fs.0.func.14 = functions.Perimeter_mean
+gp.fs.0.func.14.nc = nc0
+gp.fs.0.func.15 = functions.Radius_mean
+gp.fs.0.func.15.nc = nc0
+gp.fs.0.func.16 = functions.Smoothness_mean
+gp.fs.0.func.16.nc = nc0
+gp.fs.0.func.17 = functions.Radius_SE
+gp.fs.0.func.17.nc = nc0
+
+
+
+pop.subpop.0.size = 1024
+
+generations = 500
+
+select.tournament.size = 3
+
+#jobs = 10
+
+eval.problem = main.BreastCancerDiagnosisGP
+eval.problem.data = main.FloatData
+
+# output statistics to the file "out.stat" in the directory
+# the run was started in
+stat.file				$out.stat
